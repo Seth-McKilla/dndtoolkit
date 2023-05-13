@@ -21,12 +21,16 @@ export default async function DruidBestiaryPage({ params }: { params: { slug: st
             const value = beastInfo[key]
 
             return (
-              <div key={index} className="flex flex-col">
-                <h2 className="text-xl font-bold">{key}</h2>
-                <p className="text-lg">
-                  {typeof value === "boolean" ? (value ? "✅" : "❌") : value}
-                </p>
-              </div>
+              !["id", "beast"].includes(key) && (
+                <div key={index} className="flex flex-col">
+                  <>
+                    <h2 className="text-xl font-bold">{key}</h2>
+                    <p className="text-lg">
+                      {typeof value === "boolean" ? (value ? "✅" : "❌") : value}
+                    </p>
+                  </>
+                </div>
+              )
             )
           })}
       </div>
