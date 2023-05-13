@@ -2,10 +2,11 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+const isDev = process.env.NODE_ENV === "development";
 
 export const metadata = {
-  title: "DnD Toolkit",
-  description: "Nifty tools for tabletop dungeon and dragons players.",
+  title: "D&D Toolkit",
+  description: "Nifty tools for tabletop dungeons and dragons players.",
 };
 
 export default async function RootLayout({
@@ -13,15 +14,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  if (process.env.NODE_ENV === "development") {
-    const { seed } = await import("@/lib/seed");
-
-    try {
-      await seed();
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // if (isDev) (await import("@/lib/seed")).seed(); // Uncomment to seed the db
 
   return (
     <html lang="en">
