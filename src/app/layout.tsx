@@ -2,7 +2,7 @@ import { Inter } from "next/font/google"
 
 import "./globals.css"
 
-const isDev = process.env.NODE_ENV === "development"
+// const isDev = process.env.NODE_ENV === "development" // Uncomment to seed the db
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
