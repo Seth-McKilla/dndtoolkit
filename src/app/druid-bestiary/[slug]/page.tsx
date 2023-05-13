@@ -18,10 +18,14 @@ export default async function DruidBestiaryPage({ params }: { params: { slug: st
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-auto flex-grow p-4">
         {beastInfo &&
           Object.keys(beastInfo).map((key, index) => {
+            const value = beastInfo[key]
+
             return (
               <div key={index} className="flex flex-col">
                 <h2 className="text-xl font-bold">{key}</h2>
-                <p className="text-lg">{beastInfo[key]}</p>
+                <p className="text-lg">
+                  {typeof value === "boolean" ? (value ? "✅" : "❌") : value}
+                </p>
               </div>
             )
           })}
