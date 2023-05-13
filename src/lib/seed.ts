@@ -1,6 +1,6 @@
-import { sql } from "@vercel/postgres";
 import fs from "fs";
-import { parse } from "csv-parse/lib/sync";
+import { sql } from "@vercel/postgres";
+import { parse } from "csv-parse/sync";
 
 export async function seed() {
   await sql`DROP TABLE IF EXISTS beasts`;
