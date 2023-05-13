@@ -24,7 +24,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </div>
           </Link>
         </nav>
-        <main className="flex min-h-screen flex-col items-center justify-between p-4 pt-16 md:p-24 -mt-20">
+        <main className="flex min-h-screen flex-col items-center justify-between p-4 pt-16 -mt-20">
           <div className="flex flex-col items-center justify-center space-y-4 md:space-y-8">
             {children}
           </div>
