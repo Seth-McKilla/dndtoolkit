@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google"
 import Link from "next/link"
 import { WrenchScrewdriverIcon } from "@heroicons/react/24/solid"
+import PlausibleProvider from "next-plausible"
 
 import SeedDB from "./SeedDB"
 import "./globals.css"
@@ -15,6 +16,9 @@ export const metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <PlausibleProvider domain="dndtoolkit.vercel.app" />
+      </head>
       <body className={`overflow-x-hidden ${inter.className}`}>
         {/* <SeedDB /> */}
         <nav className="flex items-center justify-center p-4">
