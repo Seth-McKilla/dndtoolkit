@@ -2,6 +2,7 @@ import { Inter } from "next/font/google"
 import Link from "next/link"
 import { WrenchScrewdriverIcon } from "@heroicons/react/24/solid"
 
+import SeedDB from "./SeedDB"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -12,11 +13,10 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  // if (process.env.NODE_ENV === "development") (await import("@/lib/seed")).seed() // Uncomment to seed the db
-
   return (
     <html lang="en">
       <body className={`overflow-x-hidden ${inter.className}`}>
+        {/* <SeedDB /> */}
         <nav className="flex items-center justify-center p-4">
           <Link href="/" className="flex items-center justify-center text-2xl">
             <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-sm">
