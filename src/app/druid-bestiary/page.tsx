@@ -4,7 +4,7 @@ import BeastCards, { type Props as BeastCardsProps } from "./BeastCards"
 
 export default async function DruidBestiaryPage() {
   const { rows } = (await sql`
-    SELECT Beast 
+    SELECT Beast, HP, "CR#" as cr, Fly, Swim
     FROM beasts 
     ORDER BY BEAST ASC;
   `) as BeastCardsProps

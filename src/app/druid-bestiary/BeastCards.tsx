@@ -3,10 +3,10 @@
 import { useState } from "react"
 
 import { slugify } from "@/utils/common"
-import BeastCard from "./BeastCard"
+import BeastCard, { type Beast } from "./BeastCard"
 
 export type Props = {
-  rows: { beast: string }[]
+  rows: Beast[]
 }
 
 export default function BeastCards({ rows }: Props) {
@@ -28,7 +28,7 @@ export default function BeastCards({ rows }: Props) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 overflow-auto flex-grow py-4 items-start justify-start mt-2">
         {filteredRows.map((row, index) => (
-          <BeastCard key={index} href={`/druid-bestiary/${slugify(row.beast)}`} name={row.beast} />
+          <BeastCard key={index} href={`/druid-bestiary/${slugify(row.beast)}`} {...row} />
         ))}
       </div>
     </div>
