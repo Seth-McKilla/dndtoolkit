@@ -9,7 +9,7 @@ export default function LinkCard({ children, href }: Props) {
   return (
     <Link
       href={href}
-      className="rounded border border-white text-white p-4 hover:bg-gray-200 hover:text-gray-800 w-full md:w-auto text-center"
+      className="rounded border border-white text-white p-4 hover:bg-gray-400 hover:text-black w-full md:w-auto text-center"
     >
       {children}
     </Link>

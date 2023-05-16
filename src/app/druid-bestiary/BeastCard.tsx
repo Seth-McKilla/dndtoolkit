@@ -30,7 +30,12 @@ export default function BeastCard({ href, beast, hp, cr, fly, swim }: Props) {
           </div>
           <div className="flex">
             {fly && <FontAwesomeIcon icon={faFeather} style={{ color: "#ffffff" }} />}
-            {swim && <FontAwesomeIcon icon={faWater} style={{ color: "#4d8af5" }} />}
+            {swim && (
+              <FontAwesomeIcon
+                icon={faWater}
+                style={{ color: "#4d8af5", marginLeft: fly ? 8 : 0 }}
+              />
+            )}
           </div>
         </div>
       </div>
