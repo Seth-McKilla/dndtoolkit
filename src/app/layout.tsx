@@ -1,10 +1,11 @@
 import { Inter } from "next/font/google"
 import Link from "next/link"
-import { WrenchScrewdriverIcon } from "@heroicons/react/24/solid"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import PlausibleProvider from "next-plausible"
 
 import SeedDB from "./SeedDB"
 import "./globals.css"
+import { faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -23,8 +24,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         {/* <SeedDB /> */}
         <nav className="flex items-center justify-center p-4">
           <Link href="/" className="flex items-center justify-center text-2xl">
-            <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-sm">
-              D <WrenchScrewdriverIcon className="h-4 w-4" /> D
+            <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center text-sm p-0.5">
+              D
+              <FontAwesomeIcon icon={faScrewdriverWrench} style={{ color: "#ffffff" }} />D
             </div>
           </Link>
         </nav>
