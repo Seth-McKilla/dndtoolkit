@@ -1,3 +1,6 @@
+import { faBurst, faFeather, faHeart, faWater } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 import LinkCard from "@/components/LinkCard"
 
 export type Beast = {
@@ -15,14 +18,19 @@ type Props = {
 export default function BeastCard({ href, beast, hp, cr, fly, swim }: Props) {
   return (
     <LinkCard href={href}>
-      <div className="flex justify-center align-items-center text-sm">
+      <div className="flex justify-center items-center">
         <div className="flex w-full justify-between">
-          <p className="flex">
-            HP {hp} | CR {cr}
-          </p>
+          <div className="flex justify-center items-center text-sm">
+            <p>
+              <FontAwesomeIcon icon={faHeart} style={{ color: "#fe4848" }} /> {hp}
+            </p>
+            <p className="ml-4">
+              <FontAwesomeIcon icon={faBurst} style={{ color: "#fff266" }} /> {cr}
+            </p>
+          </div>
           <div className="flex">
-            {fly && "fly"}
-            {swim && "swim"}
+            {fly && <FontAwesomeIcon icon={faFeather} style={{ color: "#ffffff" }} />}
+            {swim && <FontAwesomeIcon icon={faWater} style={{ color: "#4d8af5" }} />}
           </div>
         </div>
       </div>
