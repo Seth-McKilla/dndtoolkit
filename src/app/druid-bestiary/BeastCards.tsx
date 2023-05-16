@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 
-import LinkCard from "@/components/LinkCard"
 import { slugify } from "@/utils/common"
+import BeastCard from "./BeastCard"
 
 export type Props = {
   rows: { beast: string }[]
@@ -22,13 +22,13 @@ export default function BeastCards({ rows }: Props) {
         type="text"
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.target.value)}
-        className="input bg-transparent border border-white text-white placeholder-white mx-auto block p-2 rounded"
+        className="input bg-transparent border border-white text-white placeholder-white mx-auto block p-2 rounded w-full md:max-w-lg"
         placeholder="Search beasts..."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-auto flex-grow p-4 items-start justify-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 overflow-auto flex-grow py-4 items-start justify-start mt-2">
         {filteredRows.map((row, index) => (
-          <LinkCard key={index} href={`/druid-bestiary/${slugify(row.beast)}`} title={row.beast} />
+          <BeastCard key={index} href={`/druid-bestiary/${slugify(row.beast)}`} name={row.beast} />
         ))}
       </div>
     </div>

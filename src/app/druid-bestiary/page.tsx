@@ -10,7 +10,7 @@ export default async function DruidBestiaryPage() {
   `) as BeastCardsProps
 
   return (
-    <div className="flex flex-col" style={{ height: "calc(100vh - 80px)" }}>
+    <div className="flex flex-col w-full" style={{ height: "calc(100vh - 80px)" }}>
       <h1 className="text-4xl md:text-6xl font-bold text-center mt-2 mb-4 md:mt-0">
         Druid Bestiary
       </h1>
