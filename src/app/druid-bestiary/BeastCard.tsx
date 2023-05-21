@@ -1,7 +1,10 @@
+import { MedievalSharp } from "next/font/google"
 import { faBurst, faFeather, faHeart, faWater } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import LinkCard from "@/components/LinkCard"
+
+const medievalSharp = MedievalSharp({ weight: "400", subsets: ["latin"] })
 
 export type Beast = {
   beast: string
@@ -40,7 +43,7 @@ export default function BeastCard({ href, beast, hp, cr, fly, swim }: Props) {
         </div>
       </div>
       <div>
-        <p className="text-2xl font-bold py-2">{beast}</p>
+        <p className={`text-4xl font-bold py-2 ${medievalSharp.className}`}>{beast}</p>
       </div>
     </LinkCard>
   )
