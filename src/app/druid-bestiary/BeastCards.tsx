@@ -93,7 +93,7 @@ export default function BeastCards({ rows }: Props) {
             </select>
           </div>
 
-          <div className="flex mt-2 sm:mt-0 items-center">
+          <div className="flex mt-3 sm:mt-0 items-center">
             <input
               type="checkbox"
               id="swimCheckbox"
@@ -105,12 +105,13 @@ export default function BeastCards({ rows }: Props) {
             <label htmlFor="swimCheckbox" className="flex ml-1 text-white">
               {"(swim)"}
             </label>
+
             <input
               type="checkbox"
               id="flyCheckbox"
               checked={filterFly}
               onChange={(event) => setFilterFly(event.target.checked)}
-              className="ml-0 sm:ml-4 border-white rounded border-2 w-5 h-5"
+              className="ml-4 border-white rounded border-2 w-5 h-5"
             />
             <Icon icon={faFeather} size={20} color="#ffffff" style={{ marginLeft: 4 }} />
             <label htmlFor="flyCheckbox" className="flex ml-1 text-white w-5 h-5">
