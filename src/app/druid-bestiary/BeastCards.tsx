@@ -112,8 +112,10 @@ export default function BeastCards({ rows }: Props) {
               onChange={(event) => setFilterFly(event.target.checked)}
               className="ml-0 sm:ml-4 border-white rounded border-2 w-5 h-5"
             />
-            <Icon icon={faFeather} size={20} color="#ffffff" style={{ marginLeft: 4 }} /> {"(fly)"}
-            <label htmlFor="flyCheckbox" className="flex ml-1 text-white w-5 h-5"></label>
+            <Icon icon={faFeather} size={20} color="#ffffff" style={{ marginLeft: 4 }} />
+            <label htmlFor="flyCheckbox" className="flex ml-1 text-white w-5 h-5">
+              {"(fly)"}
+            </label>
           </div>
         </div>
       </div>
