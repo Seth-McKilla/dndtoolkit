@@ -1,7 +1,7 @@
 import { MedievalSharp } from "next/font/google"
 import { faBurst, faFeather, faHeart, faWater } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
+import Icon from "@/components/Icon"
 import LinkCard from "@/components/LinkCard"
 
 const medievalSharp = MedievalSharp({ weight: "400", subsets: ["latin"] })
@@ -24,20 +24,17 @@ export default function BeastCard({ href, beast, hp, cr, fly, swim }: Props) {
       <div className="flex justify-center items-center">
         <div className="flex w-full justify-between">
           <div className="flex justify-center items-center text-sm">
-            <p>
-              <FontAwesomeIcon icon={faHeart} style={{ color: "#fe4848" }} /> {hp}
+            <p className="flex">
+              <Icon icon={faHeart} size={18} color="#fe4848" style={{ marginRight: 4 }} /> {hp}
             </p>
-            <p className="ml-4">
-              <FontAwesomeIcon icon={faBurst} style={{ color: "#fff266" }} /> {cr}
+            <p className="flex ml-4">
+              <Icon icon={faBurst} size={18} color="#fff266" style={{ marginRight: 4 }} /> {cr}
             </p>
           </div>
           <div className="flex">
-            {fly && <FontAwesomeIcon icon={faFeather} style={{ color: "#ffffff" }} />}
+            {fly && <Icon icon={faFeather} size={18} color="#ffffff" />}
             {swim && (
-              <FontAwesomeIcon
-                icon={faWater}
-                style={{ color: "#4d8af5", marginLeft: fly ? 8 : 0 }}
-              />
+              <Icon icon={faWater} size={18} color="#4d8af5" style={{ marginLeft: fly ? 8 : 0 }} />
             )}
           </div>
         </div>

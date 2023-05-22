@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { faFeather, faWater } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Icon from "@/components/Icon"
 import { slugify } from "@/utils/common"
@@ -106,17 +105,15 @@ export default function BeastCards({ rows }: Props) {
             <label htmlFor="swimCheckbox" className="flex ml-1 text-white">
               {"(swim)"}
             </label>
-
             <input
               type="checkbox"
               id="flyCheckbox"
               checked={filterFly}
               onChange={(event) => setFilterFly(event.target.checked)}
-              className="ml-4"
+              className="ml-0 sm:ml-4 border-white rounded border-2 w-5 h-5"
             />
-            <label htmlFor="flyCheckbox" className="flex ml-1 text-white w-5 h-5">
-              <FontAwesomeIcon icon={faFeather} style={{ color: "#ffffff" }} /> {"(fly)"}
-            </label>
+            <Icon icon={faFeather} size={20} color="#ffffff" style={{ marginLeft: 4 }} /> {"(fly)"}
+            <label htmlFor="flyCheckbox" className="flex ml-1 text-white w-5 h-5"></label>
           </div>
         </div>
       </div>

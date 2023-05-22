@@ -1,11 +1,12 @@
 import { Inter } from "next/font/google"
 import Link from "next/link"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import PlausibleProvider from "next-plausible"
 
 import SeedDB from "./SeedDB"
 import "./globals.css"
 import { faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons"
+
+import Icon from "@/components/Icon"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -26,7 +27,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <Link href="/" className="flex items-center justify-center text-2xl">
             <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center text-sm p-0.5">
               D
-              <FontAwesomeIcon icon={faScrewdriverWrench} style={{ color: "#ffffff" }} />D
+              <Icon icon={faScrewdriverWrench} size={12} color="#ffffff" /> D
             </div>
           </Link>
         </nav>
