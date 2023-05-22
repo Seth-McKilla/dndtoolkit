@@ -43,7 +43,7 @@ export default function BeastCard({ href, beast, hp, cr, fly, swim }: Props) {
         </div>
       </div>
       <div>
-        <p className={`text-4xl font-bold py-2 ${medievalSharp.className}`}>{beast}</p>
+        <p className={`text-3xl font-bold py-2 ${medievalSharp.className}`}>{beast}</p>
       </div>
     </LinkCard>
   )
