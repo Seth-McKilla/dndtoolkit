@@ -4,6 +4,7 @@ import { useState } from "react"
 import { faFeather, faWater } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
+import Icon from "@/components/Icon"
 import { slugify } from "@/utils/common"
 import BeastCard, { type Beast } from "./BeastCard"
 
@@ -101,8 +102,9 @@ export default function BeastCards({ rows }: Props) {
               onChange={(event) => setFilterSwim(event.target.checked)}
               className="ml-0 sm:ml-4 border-white rounded border-2 w-5 h-5"
             />
+            <Icon icon={faWater} size={20} color="#4d8af5" style={{ marginLeft: 4 }} />
             <label htmlFor="swimCheckbox" className="flex ml-1 text-white">
-              <FontAwesomeIcon icon={faWater} style={{ color: "#4d8af5" }} /> {"(swim)"}
+              {"(swim)"}
             </label>
 
             <input
